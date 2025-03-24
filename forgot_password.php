@@ -44,12 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com'; // Your SMTP server
                 $mail->SMTPAuth = true;
-                $mail->Username = 'kaviya20020806@gmail.com'; // Your email
-                $mail->Password = 'ceuj jbgr nlfk eigm'; // Your email password
+                $mail->Username = 'kkavindya51@gmail.com'; // Your email
+                $mail->Password = 'ietecvavxecrhxtg'; // Your email password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
-                $mail->setFrom('kaviya20020806@gmail.com', 'Your Website');
+                $mail->setFrom('kkavindya51@gmail.com', 'Your Website');
                 $mail->addAddress($email);
                 $mail->Subject = "Your OTP for Password Reset";
                 $mail->Body = "Your OTP for resetting the password is: $otp. This OTP is valid for 10 minutes.";
