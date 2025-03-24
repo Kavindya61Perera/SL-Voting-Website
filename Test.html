@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Lanka Online Voting</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
+  
+  <!-- Google Translate Widget -->
+  <div id="google_translate_element"></div>
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',  // Default language of the site
+        includedLanguages: 'en,si,ta', // Languages available for translation
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" 
+    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <!-- Logo and Title Section -->
+      <div class="logo">
+        <img src="t-removebg-preview (1).png" alt="Sri Lanka Online Voting Logo" />
+        <div class="logo-text">
+          <span class="title">SL Voting</span>
+          <span class="subtitle">System</span>
+        </div>
+      </div>
+      
+      <!-- Navbar with Sub-menu -->
+      <nav>
+        <div class="hamburger" id="hamburger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-list">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">E-Voting <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Instructions</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Login Icon -->
+      <a href="Login.html" class="login-link">
+        <div class="login-section">
+          <i class="fas fa-user"></i>
+          <span>Login</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Sri Lanka Online Voting</h1>
+      <p>Secure, easy, and convenient voting for Sri Lankans everywhere.</p>
+      <a href="#login" class="cta-btn">Login to Vote</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <div class="feature-box">
+        <div class="feature-item">
+          <i class="fas fa-check-circle"></i>
+          <h3>Secure Voting</h3>
+          <p>End-to-end encryption to ensure your vote is private and secure.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-user-check"></i>
+          <h3>Easy Authentication</h3>
+          <p>Biometric and face recognition for a simple and fast authentication process.</p>
+        </div>
+        <div class="feature-item">
+          <i class="fas fa-globe"></i>
+          <h3>Accessible Anywhere</h3>
+          <p>Vote from anywhere in the world, whether you’re at home or abroad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Section Below Features -->
+  <section id="divided-sections">
+    <div class="home-container">
+      <!-- First Section -->
+      <div class="section" id="section-1">
+        <div class="content">
+          <h3>Polling Station</h3>
+          <p> Whether you live in the city or the countryside, you can quickly locate the polling station designated 
+          for your area. Get all the details you need, including address, directions, and operating hours, 
+          ensuring you’re prepared to vote on election day!</p>
+          <a href="#" class="btn-click-me">Click Me</a>
+        </div>
+        <div class="image-container">
+          <img src="1.jfif" alt="Polling Station Image" class="round-image">
+        </div>
+      </div>
+
+      <!-- Second Section -->
+      <div class="section" id="section-2">
+        <div class="content">
+          <h3>Candidates</h3>
+          <p>Know about the political parties and the candidates running for office in your area. Use this information 
+          to make an informed decision before you head to the polls, and get to know the leaders who will represent 
+          your community!</p>
+          <a href="#" class="btn-click-me">Click Me</a>
+        </div>
+        <div class="image-container">
+          <img src="3.jfif" alt="Candidates Image" class="round-image">
+        </div>
+      </div>
+
+      <!-- Third Section -->
+      <div class="section" id="section-3">
+        <div class="content">
+          <h3>Voting</h3>
+          <p>Vote from anywhere, whether at home or abroad, using cutting-edge encryption and biometric authentication. 
+          Our online system ensures your vote is secure, private, and counted accurately, making it easier than ever 
+          to participate in the democratic process!</p>
+          <a href="#" class="btn-click-me">Click Me</a>
+        </div>
+        <div class="image-container">
+          <img src="43.jfif" alt="Voting Image" class="round-image">
+        </div>
+      </div>
+
+      <!-- Fourth Section -->
+      <div class="section" id="section-4">
+        <div class="content">
+          <h3>Election Results</h3>
+          <p>Stay informed with real-time election results.Our interactive results dashboard allows you to view current and past election outcomes, 
+          compare regions, and get a clear understanding of the final results as they unfold. Be part of the process!</p>
+          <a href="#" class="btn-click-me">Click Me</a>
+        </div>
+        <div class="image-container">
+          <img src="Banner2.jfif" alt="Election Results Image" class="round-image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audio Assistance Section -->
+  <div class="audio-assistance">
+    <button onclick="toggleAudioAssistance()">Enable Audio Assistance</button>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Sri Lanka Online Voting System. All Rights Reserved.</p>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For Icons -->
+  <script src="script.js"></script> <!-- Your JS for Hamburger Menu -->
+
+  <!-- Audio Assistance JS -->
+  <script>
+    // Declare a global variable for speech synthesis
+    let synth = window.speechSynthesis;
+    let isSpeaking = false; // Flag to check if speech is currently active
+    let currentUtterance = null; // Store the current utterance for stopping it
+
+    // Function to start or stop audio assistance
+    function toggleAudioAssistance() {
+      if (isSpeaking) {
+        // If already speaking, stop it
+        synth.cancel(); // This will stop the speech immediately
+        document.querySelector('.audio-assistance button').textContent = "Enable Audio Assistance"; // Change button text
+        isSpeaking = false;
+      } else {
+        // If not speaking, start reading the page content
+        currentUtterance = new SpeechSynthesisUtterance();
+        currentUtterance.lang = 'en-US';  // You can change this to support multiple languages (e.g., 'si-LK' for Sinhala)
+        currentUtterance.voice = synth.getVoices()[0]; // Use default voice
+        currentUtterance.rate = 1;  // Normal speed
+        currentUtterance.pitch = 1;  // Normal pitch
+        
+        // Get the content of the whole body to read aloud
+        let content = document.body.innerText;
+        currentUtterance.text = content;
+        
+        // Listen for when the speech ends
+        currentUtterance.onend = function() {
+          isSpeaking = false;
+          document.querySelector('.audio-assistance button').textContent = "Enable Audio Assistance"; // Change button text
+        };
+        
+        // Speak the content aloud
+        synth.speak(currentUtterance);
+        
+        // Update the state
+        isSpeaking = true;
+        document.querySelector('.audio-assistance button').textContent = "Stop Audio Assistance"; // Change button text
+      }
+    }
+  </script>
+
+</body>
+</html>

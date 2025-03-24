@@ -1,0 +1,138 @@
+<?php
+// Start the session
+session_start();
+
+// Check if user is already logged in, if so, redirect them to vote.html
+if (isset($_SESSION['user_id'])) {
+    header("Location: vote.html");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
+  <?php
+  // Prevent browser caching
+  header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+  header("Cache-Control: post-check=0, pre-check=0", false);
+  header("Pragma: no-cache");
+  ?>
+
+  <script>
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
+    }
+    window.onpopstate = function() {
+        history.go(1);
+    };
+</script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <!-- Logo and Title Section -->
+      <div class="logo">
+        <img src="t-removebg-preview (1).png" alt="Sri Lanka Online Voting Logo" />
+        <div class="logo-text">
+          <span class="title">SL Voting</span>
+          <span class="subtitle">System</span>
+        </div>
+      </div>
+      
+      <!-- Navbar with Sub-menu -->
+      <nav>
+        <div class="hamburger" id="hamburger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-list">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">E-Voting <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Instructions</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+
+  <!-- Login Icon -->
+    <a href="Login.html" class="login-link">
+    <div class="login-section">
+      <i class="fas fa-user"></i>
+      <span>Login</span>
+    </div>
+    </a>
+  </div>
+</header>
+
+
+  <section id="login-section">
+    <div class="login-container">
+      <div class="login-form">
+        <h2>Login to Your Account</h2>
+  
+        <form action="login.php" method="post">
+          <div class="form-group">
+            <label for="username">Username or Email</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username or email" value="" autocomplete="off" required>
+          </div>
+  
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" value="" autocomplete="off" required>
+          </div>
+          <!-- Google reCAPTCHA Widget -->
+    <div class="g-recaptcha" data-sitekey="6LcpjfoqAAAAAFGJnSeRdE04I11RyL27_Dz4QhFN"></div>
+  
+          <button type="submit" class="btn-login">Login</button>
+          
+          <div class="form-footer">
+            <p>If you don't have an account, <a href="register.html">Register here</a></p>
+          </div>
+
+          <div class="form-footer">
+            <p><a href="forgot_password.php">Forgot your password?</a></p>
+        </div>        
+
+        </form>
+        
+        <!-- Include reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+      </div>
+    </div>
+  </section>  
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Sri Lanka Online Voting System. All Rights Reserved.</p>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script> <!-- For Icons -->
+  <script>
+    // Clear input fields on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById("username").value = "";
+      document.getElementById("password").value = "";
+    });
+  </script>
+</body>
+</html>

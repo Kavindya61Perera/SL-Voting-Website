@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification Questions</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> <!-- Font Awesome -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .verification-container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .verification-form h2 {
+      text-align: center;
+      color: #003B6F;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #003B6F;
+    }
+
+    .form-group select, .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-group input {
+      margin-top: 5px;
+    }
+
+    .btn-submit {
+      width: 100%;
+      padding: 12px;
+      background-color: #003B6F;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: #77A9D4;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="t-removebg-preview (1).png" alt="Sri Lanka Online Voting Logo" />
+        <div class="logo-text">
+          <span class="title">SL Voting</span>
+          <span class="subtitle">System</span>
+        </div>
+      </div>
+      <nav>
+        <div class="hamburger" id="hamburger-icon">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul id="nav-list">
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li class="dropdown">
+            <a href="#">E-Voting <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Instructions</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="Login.html" class="login-link">
+        <div class="login-section">
+          <i class="fas fa-user"></i>
+          <span>Login</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <section id="verification-section">
+    <div class="verification-container">
+      <div class="verification-form">
+        <h2>Verification Questions</h2>
+
+        <form action="verifyquestion.php" method="post">
+          <div class="form-group">
+            <label for="question1">Select Question 1</label>
+            <select name="question1" id="question1" required>
+              <option value="">-- Select a question --</option>
+              <option value="What is your pet's name?">What is your pet's name?</option>
+              <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+              <option value="What was your first car?">What was your first car?</option>
+              <option value="What was the name of your elementary school?">What was the name of your elementary school?</option>
+              <option value="What city were you born in?">What city were you born in?</option>
+            </select>
+            <input type="text" name="answer1" placeholder="Your Answer" required>
+          </div>
+
+          <div class="form-group">
+            <label for="question2">Select Question 2</label>
+            <select name="question2" id="question2" required>
+              <option value="">-- Select a question --</option>
+              <option value="What is your pet's name?">What is your pet's name?</option>
+              <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+              <option value="What was your first car?">What was your first car?</option>
+              <option value="What was the name of your elementary school?">What was the name of your elementary school?</option>
+              <option value="What city were you born in?">What city were you born in?</option>
+            </select>
+            <input type="text" name="answer2" placeholder="Your Answer" required>
+          </div>
+
+          <div class="form-group">
+            <label for="question3">Select Question 3</label>
+            <select name="question3" id="question3" required>
+              <option value="">-- Select a question --</option>
+              <option value="What is your pet's name?">What is your pet's name?</option>
+              <option value="What is your mother's maiden name?">What is your mother's maiden name?</option>
+              <option value="What was your first car?">What was your first car?</option>
+              <option value="What was the name of your elementary school?">What was the name of your elementary school?</option>
+              <option value="What city were you born in?">What city were you born in?</option>
+            </select>
+            <input type="text" name="answer3" placeholder="Your Answer" required>
+          </div>
+          
+          <button type="submit" class="btn-submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Sri Lanka Online Voting System. All Rights Reserved.</p>
+      <ul>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

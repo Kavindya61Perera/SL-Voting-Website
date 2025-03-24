@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Voting Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+        h2 {
+            color: #333;
+        }
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Live Voting Results</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Candidate</th>
+                <th>Votes</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+            <!-- Live results will be inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        function results() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "results.php", true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var output = "";
+                    data.forEach(function(row) {
+                        output += "<tr><td>" + row.candidate_name + "</td><td>" + row.votes + "</td></tr>";
+                    });
+                    document.getElementById("results").innerHTML = output;
+                }
+            };
+            xhr.send();
+        }
+
+        setInterval(results, 3000); // Refresh every 3 seconds
+        results(); // Initial load
+    </script>
+
+</body>
+</html>
