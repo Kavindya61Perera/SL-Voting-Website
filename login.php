@@ -84,12 +84,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
-                $mail->Username = 'kaviya20020806@gmail.com'; // Gmail
-                $mail->Password = 'ceuj jbgr nlfk eigm'; // App Password
+                $mail->Username = 'kkavindya51@gmail.com'; // Gmail
+                $mail->Password = 'ietecvavxecrhxtg'; // App Password
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
-                $mail->setFrom('kaviya20020806@gmail.com', 'SL Voting System');
+                $mail->setFrom('kkavindya51@gmail.com', 'SL Voting System');
                 $mail->addAddress($user['email']);
                 $mail->Subject = 'Your OTP Code';
                 $mail->Body = "Your OTP Code is: $otp";
